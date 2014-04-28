@@ -90,7 +90,11 @@ def getCats(cat_url):
               for showvideo,showname, showimg, showdesc in shows:
                  showname = dexml(showname)
                  showdesc = dexml(showdesc)
-                 showurl = 'http://dp8hsntg6do36.cloudfront.net/%s/high.mp4' % (showvideo)
+                 if addon.getSetting('high_res') == "true":
+                    res = 'high'
+                 else:
+                    res = 'low'
+                 showurl = 'http://dp8hsntg6do36.cloudfront.net/%s/%s.mp4' % (showvideo, res)
                  addLink(showurl.encode(UTF8),showname,showimg,addonfanart,showdesc,GENRE_TV,'')
               try:
                  nextpg = re.compile("'ajaxurl'.+?'(.+?)'").findall(pg)[0]

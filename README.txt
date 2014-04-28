@@ -7,3 +7,6 @@ XBMC Addon for GQ website
  
 version 1.0.1 initial release
 
+
+
+1.0.2 - added HD resolution select setting
