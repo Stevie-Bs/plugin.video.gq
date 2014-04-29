@@ -66,10 +66,10 @@ def getRequest(url):
 
 
 def getSources(fanart):
-                  addDir(__language__("30001"),'/new.js?page=1','GC',icon,addonfanart,__language__("30001"),GENRE_TV,'',False)
-                  addDir(__language__("30002"),'/popular.js?page=1','GC',icon,addonfanart,__language__("30002"),GENRE_TV,'',False)
-#                  addDir(__language__("30005"),'series','GA',icon,addonfanart,__language__("30005"),GENRE_TV,'',False)
-                  addDir(__language__("30003"),'categories','GA',icon,addonfanart,__language__("30003"),GENRE_TV,'',False)
+                  addDir(__language__(30001),'/new.js?page=1','GC',icon,addonfanart,__language__(30001),GENRE_TV,'',False)
+                  addDir(__language__(30002),'/popular.js?page=1','GC',icon,addonfanart,__language__(30002),GENRE_TV,'',False)
+#                  addDir(__language__(30005),'series','GA',icon,addonfanart,__language__(30005),GENRE_TV,'',False)
+                  addDir(__language__(30003),'categories','GA',icon,addonfanart,__language__(30003),GENRE_TV,'',False)
 
 
 
@@ -98,7 +98,7 @@ def getCats(cat_url):
                  addLink(showurl.encode(UTF8),showname,showimg,addonfanart,showdesc,GENRE_TV,'')
               try:
                  nextpg = re.compile("'ajaxurl'.+?'(.+?)'").findall(pg)[0]
-                 addDir('[COLOR red]%s[/COLOR]' % (__language__("30004")),nextpg.encode(UTF8),'GC','',addonfanart,__language__("30001"),GENRE_TV,'',False)
+                 addDir('[COLOR red]%s[/COLOR]' % (__language__(30004)),nextpg.encode(UTF8),'GC','',addonfanart,__language__(30001),GENRE_TV,'',False)
               except:
                  pass
 
